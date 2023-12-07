@@ -23,11 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 // Auth::routes(['register' => false]);
 Route::get('/', [orderController::class, 'index'])->name('index');
-// Route::middleware('auth')->prefix('stock')->name('User.')->group(function(){
-Route::prefix('stock')->name('User.')->group(function(){
-    Route::get('/create', [UserController::class, 'create'])->name('create');
-    Route::post('/store', [UserController::class, 'store'])->name('store');
-});
+
 Route::prefix('stock')->name('stock.')->group(function(){
     Route::get('/import-stock', [orderController::class, 'importOrder'])->name('import');
     Route::post('/upload-stock', [orderController::class, 'uploadOrder'])->name('upload');

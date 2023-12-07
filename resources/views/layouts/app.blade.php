@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/f75ab26951.js" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" />
 
     <!-- Custom styles for this template-->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
@@ -70,6 +71,23 @@
     </div>
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('admin/js/sb-admin-2.min.js')}}"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 </body>
 
 </html>
+  <script>
+    $(document).ready(function() {
+      $('#myTable').DataTable({
+        "oPaginate": {
+          "sNext": '<img src="../../public/img/SlowRight.png">',
+          "sPrevious": '<img src="../../public/img/SlowLeft.jpg">',
+          "sFirst": '<img src="../../public/img/FastLeft.jpg">',
+          "sLast": '<img src="../../public/img/FastRight.jpg">'
+        }
+      });
+    });
+  </script>

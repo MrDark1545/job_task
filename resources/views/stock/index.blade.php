@@ -23,7 +23,7 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered" id="myTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th width="20%">Email</th>
@@ -37,19 +37,17 @@
                         <tbody>
                             @foreach ($result as $row)
                                 <tr>
-                                    <td>{{ $row->email }}</td>
-                                    <td>{{ $row->first_order }}</td>
-                                    <td>{{ $row->last_order }}</td>
-                                    <td>{{ $row->total_orders }}</td>
-                                    <td>{{ $row->total_quantity }}</td>
-                                    <td>{{ $row->day_diff }}</td>
+                                    <td>{{ $row['email'] }}</td>
+                                    <td>{{ $row['first_order_date'] }}</td>
+                                    <td>{{ $row['last_order_date'] }}</td>
+                                    <td>{{ $row['total_orders'] }}</td>
+                                    <td>{{ $row['total_quantity_ordered'] }}</td>
+                                    <td>{{ $row['day_diff'] }}</td>
                                   
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
-
-                    {{ $result->links() }}
                 </div>
             </div>
         </div>

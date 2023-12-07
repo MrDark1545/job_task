@@ -63,7 +63,7 @@
 	<!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 	<!--===============================================================================================-->
-	<script {{asset('admin/js/main.js')}} src="js/main.js"></script>
+	<script  src="{{asset('admin/js/main.js')}} "></script>
 
 </body>
 
